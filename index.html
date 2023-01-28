@@ -1,0 +1,76 @@
+<html>
+	<head>
+    <meta charset="utf-8" />
+		<title>Calculadora</title>
+
+		<!-- Bootstrap início -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Bootstrap fim -->
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <link rel="stylesheet" href="estilo.css">
+    
+    <script src="app.js"></script>
+
+	</head>
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <div id="calculadora">
+            <div class="visor">
+              <input class="form-control" id="visor" type="text" placeholder="0" disabled="disabled">
+            </div>
+            <div class="teclado">
+              <div class="row">
+                <button class="formatacao2 botao btn btn-dark btn-lg" type="button" value="C" onclick="calcular('acao', 'C')">C</button>
+                <button class="botao btn btn-lg btn-dark" type="button" value="/" onclick="calcular('acao', '/')">/</button>
+                <button class="botao btn btn-dark btn-lg" type="button" value="x" onclick="calcular('acao', '*')">x</button>
+                
+              </div>
+
+              <div class="row">
+                <button class="botao btn btn-dark btn-lg" type="button" value="7" onclick="calcular('valor', '7')">7</button>
+                <button class="botao btn btn-dark btn-lg" type="button" value="8" onclick="calcular('valor', '8')">8</button>
+                <button class="botao btn btn-dark btn-lg" type="button" value="9" onclick="calcular('valor', '9')">9</button>
+                <button class="botao btn btn-dark btn-lg" type="button" value="-" onclick="calcular('acao', '-')">-</button>
+              </div>
+
+              <div class="row">
+                <button class="botao btn btn-dark btn-lg" type="button" value="4" onclick="calcular('valor', '4')">4</button>
+                <button class="botao btn btn-dark btn-lg" type="button" value="5" onclick="calcular('valor', '5')">5</button>
+                <button class="botao btn btn-dark btn-lg" type="button" value="6" onclick="calcular('valor', '6')">6</button>
+                <button class="botao btn btn-dark btn-lg" type="button" value="+" onclick="calcular('acao', '+')">+</button>
+              </div>
+
+              <div class="row">
+                <button class="botao btn btn-dark btn-lg" type="button" value="1" onclick="calcular('valor', '1')">1</button>
+                <button class="botao btn btn-dark btn-lg" type="button" value="2" onclick="calcular('valor', '2')">2</button>
+                <button class="botao btn btn-dark btn-lg" type="button" value="3" onclick="calcular('valor', '3')">3</button>
+                <button class="formatacao1 btn btn-dark btn-lg" type="button" value="=" onclick="calcular('acao', '=')">=</button>
+              </div>
+
+              <div class="row" style="margin-top: -60; ">
+                <button class="formatacao2 botao btn btn-dark btn-lg" type="button" value="0" onclick="calcular('valor', '0')" style="margin-right: 2px;">0</button>
+                <button class="botao btn btn-dark btn-lg" type="button" value="." onclick="calcular('valor', '.')">.</button>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </body>	
+</html>
